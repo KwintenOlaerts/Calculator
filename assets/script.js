@@ -1,22 +1,30 @@
+// START
+console.log('start hier');
+
+// GLOBALE VARIABELEN
+
+// FUNCTIONS
 function calc(){
+  console.log('calc function called');
+
+  // PRIVATE VARIABELEN
   var a = parseInt(document.querySelector("#value1").value);
   var b = parseInt(document.querySelector("#value2").value);
   var op = document.querySelector("#operator").value;
-  var calculate;
+  var result;
+
 
   if (op == "plus") {
-    calculate = a + b;
+    result = a + b;
   } else if (op == "min") {
-    calculate = a - b;
+    result = a - b;
   }
   else if (op == "delen") {
-    calculate = a / b;
+    result = a / b;
   }
   else if (op == "maal") {
-    calculate = a * b;
+    result = a * b;
   }
+console.log(result)
+document.querySelector("#result").innerHTML = result;
 }
-
-document.querySelector("#result").innerHTML = calculate;
-
-console.log(calculate)
